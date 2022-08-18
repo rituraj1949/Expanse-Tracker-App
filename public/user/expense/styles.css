@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
+
+:root {
+    --bg: rgba(255, 255, 255, 0.425);
+    --text: rgb(179, 8, 8);
+    --line: #ebd4d4;
+    --last: #835858;
+    --box-shadow: 0 1px 5px rgba(250, 250, 250, 0.2),
+      0 1px 5px rgba(255, 255, 255, 0.3);
+  }
+
+*{
+    font-family: 'quicksand',Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.dark-mode {
+  background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://images.unsplash.com/photo-1523374228107-6e44bd2b524e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") repeat;
+  color: azure;
+}
+
+body {
+  font-family: "Viaoda Libre", cursive;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+h3 {
+  border-bottom: 1px solid var(--line);
+  padding: 10px;
+  margin: 40px 0 10px;
+}
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--last);
+}
+p {
+  color: var(--bg);
+  font-weight: bold;
+}
+.inc-exp-container {
+  background-color: var(--line);
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid var(--last);
+}
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+.files {
+  color: forestgreen;
+}
+.money.minus {
+  color: crimson;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: underline;
+}
+input[type="text"],
+input[type="number"] {
+  border: 1px solid var(--last);
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+select {
+  border: 1px solid var(--last);
+  background-color: #fff;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+small{
+    font-size: x-small;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+.buy-plus, .log-out {
+  font-size: small;
+  padding: 0.5rem;
+}
+
+.buy-plus:hover, .log-out:hover{
+  border-bottom: 1px #57b846 solid;
+  cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    margin-top: 0.5em;
+    background: #57b846;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.8em 1em 0.8em 1em!important;
+    transition: 0.5s;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+    z-index: 2;
+    outline: none;
+}
+
+.btn:hover{
+    background: #222;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: none;
+}
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.list li {
+  background-color: forestgreen;
+  color: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  transition: ease-in 0.2s;
+}
+
+.list li:hover{
+  transform: scale(1.1);
+}
+
+.list li.plus {
+  border-right: 5px solid forestgreen;
+}
+.list li.minus {
+  border-right: 5px solid crimson;
+}
+
+.pages{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn {
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: var(--bg) solid;
+  border-radius: 10px;
+  transition: ease-in 0.2s;  
+}
+
+.page-btn:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: var(--line);
+  border: 0;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.plus {
+  display: none;
+}
